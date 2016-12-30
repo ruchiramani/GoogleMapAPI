@@ -1,0 +1,21 @@
+<%= will_paginate @contacts %>
+<table style="width:500px">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th style="text-align:right;">Email</th>
+    <th style="text-align:right;">Accounts</th>
+  </tr>
+  </thead>
+  <tbody>
+    
+  <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.name %></td>
+        <td style="text-align:right;"><%= contact.email %></td>
+        <td style="text-align:right;"><%= contact.accounts %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= will_paginate @contacts %>
